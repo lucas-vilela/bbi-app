@@ -41,8 +41,8 @@ export default function Home() {
           </CardHeader>
           <CardContent>
             <Link target="_blank" href={link}>
-              <span className="flex items-center gap-1 font-medium">
-                {link}<ExternalLink size={12} />
+              <span className="flex items-center gap-2 font-medium">
+                https://{env && env}{brand}.com<ExternalLink size={12} />
               </span>
             </Link>
           </CardContent>
@@ -61,31 +61,61 @@ export default function Home() {
             </CardHeader>
             <CardContent>
 
-              <RadioGroup defaultValue="qa" >
+              <RadioGroup defaultValue="mav-qa." >
                 <p className="flex gap-2 items-center"><span><Hammer size={14} /></span> Low</p>
-                <div className="flex items-center gap-3 rounded-md transition-all duration-300 hover:bg-slate-100 py-1 pl-1 pr-4 w-fit">
-                  <RadioGroupItem value="mav-dev." id="development" onClick={(e) => { setEnv(e.target.value) }} />
-                  <Label htmlFor="development">Development</Label>
+                <div className="flex justify-between rounded-md transition-all duration-300 hover:bg-slate-100 py-1 pl-1 pr-4 w-full">
+                  <div className="flex items-center gap-3">
+                    <RadioGroupItem value="mav-dev." id="development" onClick={(e) => { setEnv(e.target.value) }} />
+                    <Label htmlFor="development">Development</Label>
+                  </div>
+                  <div className="flex gap-2">
+                    <Separator orientation="vertical" />
+                    <p className="text-sm leading-none font-medium w-7">Dev</p>
+                  </div>
                 </div>
-                <div className="flex items-center gap-3 rounded-md transition-all duration-300 hover:bg-slate-100 py-1 pl-1 pr-4 w-fit">
-                  <RadioGroupItem value="mav-qa." id="quality" onClick={(e) => { setEnv(e.target.value) }} />
-                  <Label htmlFor="quality">QA</Label>
+                <div className="flex justify-between rounded-md transition-all duration-300 hover:bg-slate-100 py-1 pl-1 pr-4 w-full">
+                  <div className="flex items-center gap-3">
+                    <RadioGroupItem value="mav-qa." id="quality" onClick={(e) => { setEnv(e.target.value) }} />
+                    <Label htmlFor="quality">QA</Label>
+                  </div>
+                  <div className="flex gap-2">
+                    {/* <Separator orientation="vertical" />
+                    <p className="text-sm leading-none font-medium w-7">Qa</p> */}
+                  </div>
                 </div>
-                <div className="flex items-center gap-3 rounded-md transition-all duration-300 hover:bg-slate-100 py-1 pl-1 pr-4 w-fit">
-                  <RadioGroupItem value="mav-stg." id="stage" onClick={(e) => { setEnv(e.target.value) }} />
-                  <Label htmlFor="stage">Stage</Label>
+                <div className="flex justify-between rounded-md transition-all duration-300 hover:bg-slate-100 py-1 pl-1 pr-4 w-full">
+                  <div className="flex items-center gap-3">
+                    <RadioGroupItem value="mav-stg." id="stage" onClick={(e) => { setEnv(e.target.value) }} />
+                    <Label htmlFor="stage">Stage</Label>
+                  </div>
+                  <div className="flex gap-2">
+                    <Separator orientation="vertical" />
+                    <p className="text-sm leading-none font-medium w-7">Stg</p>
+                  </div>
                 </div>
                 <Separator className="my-4" />
 
                 <p className="flex gap-2 items-center"><span><PackageCheck size={14} /></span> High</p>
 
-                <div className="flex items-center gap-3 rounded-md transition-all duration-300 hover:bg-slate-100 py-1 pl-1 pr-4 w-fit">
-                  <RadioGroupItem value="mav-preview." id="preview" onClick={(e) => { setEnv(e.target.value) }} />
-                  <Label htmlFor="preview">Preview</Label>
+                <div className="flex justify-between rounded-md transition-all duration-300 hover:bg-slate-100 py-1 pl-1 pr-4 w-full">
+                  <div className="flex items-center gap-3">
+                    <RadioGroupItem value="mav-preview." id="preview" onClick={(e) => { setEnv(e.target.value) }} />
+                    <Label htmlFor="preview">Preview</Label>
+                  </div>
+                  <div className="flex gap-2">
+                    {/* <Separator orientation="vertical" />
+                    <p className="text-sm leading-none font-medium w-7">Prd</p> */}
+                  </div>
                 </div>
-                <div className="flex items-center gap-3 rounded-md transition-all duration-300 hover:bg-slate-100 py-1 pl-1 pr-4 w-fit">
-                  <RadioGroupItem value="" id="production" onClick={(e) => { setEnv(e.target.value) }} />
-                  <Label htmlFor="production">Production</Label>
+                <div className="flex justify-between rounded-md transition-all duration-300 hover:bg-slate-100 py-1 pl-1 pr-4 w-full">
+                  <div className="flex items-center gap-3">
+                    <RadioGroupItem value="" id="production" onClick={(e) => { setEnv(e.target.value) }} />
+                    <Label htmlFor="production">Production</Label>
+                  </div>
+                  <div className="flex gap-2">
+                    <Separator orientation="vertical" />
+                    <p className="text-sm leading-none font-medium w-7">Prd</p>
+                  </div>
                 </div>
               </RadioGroup>
             </CardContent>
@@ -104,18 +134,47 @@ export default function Home() {
             </CardHeader>
             <CardContent>
 
-              <RadioGroup defaultValue="obs">
-                <div className="flex items-center gap-3 rounded-md transition-all duration-300 hover:bg-slate-100 py-1 pl-1 pr-4 w-fit">
-                  <RadioGroupItem value="outback" id="outback" onClick={(e) => { setBrand(e.target.value) }} />
-                  <Label htmlFor="outback">Outback</Label>
+              <RadioGroup defaultValue="outback">
+                <div className="flex justify-between rounded-md transition-all duration-300 hover:bg-slate-100 py-1 pl-1 pr-4 w-full">
+                  <div className="flex items-center gap-3">
+                    <RadioGroupItem value="outback" id="outback" onClick={(e) => { setBrand(e.target.value) }} />
+                    <Label htmlFor="outback">Outback</Label>
+                  </div>
+                  <div className="flex gap-2">
+                    <Separator orientation="vertical" />
+                    <p className="text-sm leading-none font-medium w-7">OBS</p>
+                  </div>
                 </div>
-                <div className="flex items-center gap-3 rounded-md transition-all duration-300 hover:bg-slate-100 py-1 pl-1 pr-4 w-fit">
-                  <RadioGroupItem value="carrabbas" id="carrabbas" onClick={(e) => { setBrand(e.target.value) }} />
-                  <Label htmlFor="carrabbas">Carrabba's</Label>
+                <div className="flex justify-between rounded-md transition-all duration-300 hover:bg-slate-100 py-1 pl-1 pr-4 w-full">
+                  <div className="flex items-center gap-3">
+                    <RadioGroupItem value="carrabbas" id="carrabbas" onClick={(e) => { setBrand(e.target.value) }} />
+                    <Label htmlFor="carrabbas">Carrabba's</Label>
+                  </div>
+                  <div className="flex gap-2">
+                    <Separator orientation="vertical" />
+                    <p className="text-sm leading-none font-medium w-7">CIG</p>
+                  </div>
                 </div>
-                <div className="flex items-center gap-3 rounded-md transition-all duration-300 hover:bg-slate-100 py-1 pl-1 pr-4 w-fit">
-                  <RadioGroupItem value="bonefishgrill" id="bonefish" onClick={(e) => { setBrand(e.target.value) }} />
-                  <Label htmlFor="bonefish">Bonefish Grill</Label>
+                <div className="flex justify-between rounded-md transition-all duration-300 hover:bg-slate-100 py-1 pl-1 pr-4 w-full">
+                  <div className="flex items-center gap-3">
+                    <RadioGroupItem value="bonefishgrill" id="bonefish" onClick={(e) => { setBrand(e.target.value) }} />
+                    <Label htmlFor="bonefish">Bonefish Grill</Label>
+                  </div>
+                  <div className="flex gap-2">
+                    <Separator orientation="vertical" />
+                    <p className="text-sm leading-none font-medium w-7">BFG</p>
+                  </div>
+                </div>
+                <Separator className="my-4" />
+                <div className="flex justify-between rounded-md transition-all duration-300 hover:bg-slate-100 py-1 pl-1 pr-4 w-full">
+                  <div className="flex items-center gap-3">
+                    <RadioGroupItem value="dine-rewards" id="dine-rewards" onClick={(e) => { setBrand(e.target.value) }} />
+                    <Label htmlFor="dine-rewards">Dine Rewards</Label>
+                  </div>
+                  <div className="flex gap-2">
+                    <Separator orientation="vertical" />
+                    <p className="text-sm leading-none font-medium w-7">DR</p>
+                  </div>
                 </div>
               </RadioGroup>
             </CardContent>
