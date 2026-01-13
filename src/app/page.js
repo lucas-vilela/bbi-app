@@ -201,7 +201,7 @@ export default function Home() {
     moeda: 1800,
     telefone: 984058779
   }
-  const novaAba = false
+  const novaAba = true
   const env = 'preview'
 
   return (
