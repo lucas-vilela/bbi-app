@@ -1,4 +1,4 @@
-// "use client"
+"use client"
 // import { Label } from "@/components/ui/label"
 // import {
 //   RadioGroup,
@@ -193,43 +193,50 @@
 // import MyMorphingPopoverCustomTransitionVariants from "@/components/my/MyMorphingPopover";
 // import MyClock from "@/components/my/MySlidingNumber";
 import { Button } from "@/components/ui/button";
+import { Label } from "@/components/ui/label";
+import { Switch } from "@/components/ui/switch";
 // import { info } from "console";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Home() {
   let data = {
     moeda: 1800,
     telefone: 984058779
   }
-  const novaAba = true
+  const [newTab, setNewTab] = useState(true)
   const env = 'preview'
 
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+        <div className="flex items-center space-x-2">
+          <Switch id="airplane-mode" checked={newTab} onCheckedChange={(e) => { setNewTab(e) }} />
+          <Label htmlFor="airplane-mode" >New tab</Label>
+        </div>
         <div className="flex lg:flex-row flex-col gap-8">
           <div className="rounded-md p-2 flex flex-col gap-4">
-            <Link target={novaAba ? '_blank' : ''} className="w-full" href={`https://mav-${env}.outback.com/menu`}><Button className="w-full cursor-pointer">Generic</Button> </Link>
-            <Link target={novaAba ? '_blank' : ''} className="w-full" href={`https://mav-${env}.outback.com/menu/restaurant/category/47481`}><Button className="w-full cursor-pointer">Generic - To Go boozy beverages</Button> </Link>
-            <Link target={novaAba ? '_blank' : ''} className="w-full" href={`https://mav-${env}.outback.com/menu/restaurant/category/x`}><Button className="w-full  bg-red-500 cursor-pointer">Generic - category invalid</Button> </Link>
+            <Link target={newTab ? '_blank' : ''} className="w-full" href={`https://mav-${env}.outback.com/menu`}><Button className="w-full cursor-pointer">Generic</Button> </Link>
+            <Link target={newTab ? '_blank' : ''} className="w-full" href={`https://mav-${env}.outback.com/menu/restaurant/category/47481`}><Button className="w-full cursor-pointer">Generic - To Go boozy beverages</Button> </Link>
+            <Link target={newTab ? '_blank' : ''} className="w-full" href={`https://mav-${env}.outback.com/menu/restaurant/category/x`}><Button className="w-full  bg-red-500 cursor-pointer">Generic - category invalid</Button> </Link>
           </div>
           <div className="rounded-md p-2 flex flex-col gap-4">
-            <Link target={novaAba ? '_blank' : ''} className="w-full" href={`https://mav-${env}.outback.com/menu/secaucus`}><Button className="w-full cursor-pointer">Secaucus</Button> </Link>
-            <Link target={novaAba ? '_blank' : ''} className="w-full" href={`https://mav-${env}.outback.com/menu/secaucus/category/0`}><Button className="w-full cursor-pointer">Secaucus - category 0</Button> </Link>
-            <Link target={novaAba ? '_blank' : ''} className="w-full" href={`https://mav-${env}.outback.com/menu/secaucus/category/42909`}><Button className="w-full cursor-pointer">Secaucus - desserts</Button> </Link>
-            <Link target={novaAba ? '_blank' : ''} className="w-full" href={`https://mav-${env}.outback.com/menu/secaucus/category/977391`}><Button className="w-full bg-red-500 cursor-pointer">Secaucus - category invalid</Button> </Link>
-            <Link target={novaAba ? '_blank' : ''} className="w-full" href={`https://mav-${env}.outback.com/menu/secaucusx`}><Button className="w-full bg-pink-700 cursor-pointer">Secaucus - restaurant invalid</Button> </Link>
-            <Link target={novaAba ? '_blank' : ''} className="w-full" href={`https://mav-${env}.outback.com/menu/secaucusx/category/42909`}><Button className="w-full bg-pink-700 cursor-pointer">Secaucus - restaurant invalid category valid</Button> </Link>
-            <Link target={novaAba ? '_blank' : ''} className="w-full" href={`https://mav-${env}.outback.com/menu/secaucusx/category/97731`}><Button className="w-full bg-amber-500 cursor-pointer">Secaucus - restaurant and category invalid</Button> </Link>
+            <Link target={newTab ? '_blank' : ''} className="w-full" href={`https://mav-${env}.outback.com/menu/secaucus`}><Button className="w-full cursor-pointer">Secaucus</Button> </Link>
+            <Link target={newTab ? '_blank' : ''} className="w-full" href={`https://mav-${env}.outback.com/menu/secaucus/category/0`}><Button className="w-full cursor-pointer">Secaucus - category 0</Button> </Link>
+            <Link target={newTab ? '_blank' : ''} className="w-full" href={`https://mav-${env}.outback.com/menu/secaucus/category/42909`}><Button className="w-full cursor-pointer">Secaucus - desserts</Button> </Link>
+            <Link target={newTab ? '_blank' : ''} className="w-full" href={`https://mav-${env}.outback.com/menu/secaucus/category/977391`}><Button className="w-full bg-red-500 cursor-pointer">Secaucus - category invalid</Button> </Link>
+            <Link target={newTab ? '_blank' : ''} className="w-full" href={`https://mav-${env}.outback.com/menu/secaucusx`}><Button className="w-full bg-pink-700 cursor-pointer">Secaucus - restaurant invalid</Button> </Link>
+            <Link target={newTab ? '_blank' : ''} className="w-full" href={`https://mav-${env}.outback.com/menu/secaucusx/category/42909`}><Button className="w-full bg-pink-700 cursor-pointer">Secaucus - restaurant invalid category valid</Button> </Link>
+            <Link target={newTab ? '_blank' : ''} className="w-full" href={`https://mav-${env}.outback.com/menu/secaucusx/category/97731`}><Button className="w-full bg-amber-500 cursor-pointer">Secaucus - restaurant and category invalid</Button> </Link>
           </div>
           <div className="rounded-md p-2 flex flex-col gap-4">
-            <Link target={novaAba ? '_blank' : ''} className="w-full" href={`https://mav-${env}.outback.com/menu/tyler`}><Button className="w-full cursor-pointer" >Tyler</Button>  </Link>
-            <Link target={novaAba ? '_blank' : ''} className="w-full" href={`https://mav-${env}.outback.com/menu/tyler/category/0`}><Button className="w-full cursor-pointer" >Tyler - category 0</Button>  </Link>
-            <Link target={novaAba ? '_blank' : ''} className="w-full" href={`https://mav-${env}.outback.com/menu/tyler/category/42910`}><Button className="w-full cursor-pointer" >Tyler - kids menu</Button> </Link>
-            <Link target={novaAba ? '_blank' : ''} className="w-full" href={`https://mav-${env}.outback.com/menu/tyler/category/392581`}><Button className="w-full bg-red-500 cursor-pointer">Tyler - category invalid</Button>  </Link>
-            <Link target={novaAba ? '_blank' : ''} className="w-full" href={`https://mav-${env}.outback.com/menu/tylerx`}><Button className="w-full bg-pink-700 cursor-pointer">Tyler - restaurant invalid</Button> </Link>
-            <Link target={novaAba ? '_blank' : ''} className="w-full" href={`https://mav-${env}.outback.com/menu/tylerx/category/42910`}><Button className="w-full bg-pink-700 cursor-pointer">Tyler - restaurant invalid category valid</Button> </Link>
-            <Link target={novaAba ? '_blank' : ''} className="w-full" href={`https://mav-${env}.outback.com/menu/tylerx/category/39255`}><Button className="w-full bg-amber-500 cursor-pointer">Tyler - restaurant and category invalid</Button> </Link>
+            <Link target={newTab ? '_blank' : ''} className="w-full" href={`https://mav-${env}.outback.com/menu/tyler`}><Button className="w-full cursor-pointer" >Tyler</Button>  </Link>
+            <Link target={newTab ? '_blank' : ''} className="w-full" href={`https://mav-${env}.outback.com/menu/tyler/category/0`}><Button className="w-full cursor-pointer" >Tyler - category 0</Button>  </Link>
+            <Link target={newTab ? '_blank' : ''} className="w-full" href={`https://mav-${env}.outback.com/menu/tyler/category/42910`}><Button className="w-full cursor-pointer" >Tyler - kids menu</Button> </Link>
+            <Link target={newTab ? '_blank' : ''} className="w-full" href={`https://mav-${env}.outback.com/menu/tyler/category/392581`}><Button className="w-full bg-red-500 cursor-pointer">Tyler - category invalid</Button>  </Link>
+            <Link target={newTab ? '_blank' : ''} className="w-full" href={`https://mav-${env}.outback.com/menu/tylerx`}><Button className="w-full bg-pink-700 cursor-pointer">Tyler - restaurant invalid</Button> </Link>
+            <Link target={newTab ? '_blank' : ''} className="w-full" href={`https://mav-${env}.outback.com/menu/tylerx/category/42910`}><Button className="w-full bg-pink-700 cursor-pointer">Tyler - restaurant invalid category valid</Button> </Link>
+            <Link target={newTab ? '_blank' : ''} className="w-full" href={`https://mav-${env}.outback.com/menu/tylerx/category/39255`}><Button className="w-full bg-amber-500 cursor-pointer">Tyler - restaurant and category invalid</Button> </Link>
 
           </div>
         </div>
