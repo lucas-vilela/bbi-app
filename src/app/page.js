@@ -36,7 +36,7 @@ export default function Home() {
         <Card className="w-full">
           <CardHeader>
             <CardTitle>Card Title</CardTitle>
-            <CardDescription>Card Description</CardDescription>
+            <CardDescription>Card Description edit</CardDescription>
             <CardAction>Card Action</CardAction>
           </CardHeader>
           <CardContent>
