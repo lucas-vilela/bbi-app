@@ -225,10 +225,10 @@ export default function Home() {
                         </span>
                       </Link>
                     </div>
-                    <div className="flex gap-2">
+                    {/* <div className="flex gap-2">
                       <Separator orientation="vertical" />
                       <p className="text-sm leading-none font-medium w-7"></p>
-                    </div>
+                    </div> */}
                   </div>
                   <div className="flex justify-between rounded-md transition-all duration-300 hover:bg-slate-100 py-1 pl-1 pr-4 w-full">
                     <div className="flex items-center gap-3">
@@ -238,13 +238,13 @@ export default function Home() {
                         </span>
                       </Link>
                     </div>
-                    <div className="flex gap-2">
+                    {/* <div className="flex gap-2">
                       <Separator orientation="vertical" />
                       <p className="text-sm leading-none font-medium w-7"></p>
-                    </div>
+                    </div> */}
                   </div>
                   
-                  <Separator className="my-4" />
+                  <Separator className="my-6" />
 
                   <p className="flex gap-2 items-center"><Image src="/cig-favicon.png" width={20} height={10} alt="cig icon" /> Carrabba's</p>
                   <div className="flex justify-between rounded-md transition-all duration-300 hover:bg-slate-100 py-1 pl-1 pr-4 w-full">
@@ -255,14 +255,14 @@ export default function Home() {
                         </span>
                       </Link>
                     </div>
-                    <div className="flex gap-2">
+                    {/* <div className="flex gap-2">
                       <Separator orientation="vertical" />
                       <p className="text-sm leading-none font-medium w-7"></p>
-                    </div>
+                    </div> */}
                   </div>
                   
                   
-                  <Separator className="my-4" />
+                  <Separator className="my-6" />
 
                   <p className="flex gap-2 items-center"><Image src="/bfg-favicon.png" width={20} height={10} alt="bfg icon" /> Bonefish</p>
                   <div className="flex justify-between rounded-md transition-all duration-300 hover:bg-slate-100 py-1 pl-1 pr-4 w-full">
@@ -273,10 +273,10 @@ export default function Home() {
                         </span>
                       </Link>
                     </div>
-                    <div className="flex gap-2">
+                    {/* <div className="flex gap-2">
                       <Separator orientation="vertical" />
                       <p className="text-sm leading-none font-medium w-7"></p>
-                    </div>
+                    </div> */}
                   </div>
                   <div className="flex justify-between rounded-md transition-all duration-300 hover:bg-slate-100 py-1 pl-1 pr-4 w-full">
                     <div className="flex items-center gap-3">
@@ -286,10 +286,10 @@ export default function Home() {
                         </span>
                       </Link>
                     </div>
-                    <div className="flex gap-2">
+                    {/* <div className="flex gap-2">
                       <Separator orientation="vertical" />
                       <p className="text-sm leading-none font-medium w-7"></p>
-                    </div>
+                    </div> */}
                   </div>
                   <div className="flex justify-between rounded-md transition-all duration-300 hover:bg-slate-100 py-1 pl-1 pr-4 w-full">
                     <div className="flex items-center gap-3">
@@ -299,10 +299,10 @@ export default function Home() {
                         </span>
                       </Link>
                     </div>
-                    <div className="flex gap-2">
+                    {/* <div className="flex gap-2">
                       <Separator orientation="vertical" />
                       <p className="text-sm leading-none font-medium w-7"></p>
-                    </div>
+                    </div> */}
                   </div>
                   
                   
