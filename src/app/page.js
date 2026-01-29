@@ -18,6 +18,7 @@ import { ExternalLink, Hammer, PackageCheck, AppWindowIcon, CodeIcon, Smartphone
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import Image from "next/image";
 
 export default function Home() {
   const [link, setLink] = useState('https://mav-qa.outback.com');
@@ -44,6 +45,7 @@ export default function Home() {
             App
           </TabsTrigger>
         </TabsList>
+
         <TabsContent value="web" className="flex flex-col gap-4 w-full">
           <div className="w-full">
             <Card className="w-full">
@@ -136,7 +138,6 @@ export default function Home() {
             <p>Card Footer</p>
           </CardFooter> */}
               </Card>
-
             </div>
             <div className="w-full sm:w-xs">
               <Card className="w-full">
@@ -153,8 +154,9 @@ export default function Home() {
                         <RadioGroupItem value="outback" id="outback" onClick={(e) => { setBrand(e.target.value) }} />
                         <Label htmlFor="outback">Outback</Label>
                       </div>
-                      <div className="flex gap-2">
+                      <div className="flex gap-2 items-center">
                         <Separator orientation="vertical" />
+                        <Image src="/obs-favicon.png" width={20} height={10} alt="obs icon" />
                         <p className="text-sm leading-none font-medium w-7">OBS</p>
                       </div>
                     </div>
@@ -163,8 +165,9 @@ export default function Home() {
                         <RadioGroupItem value="carrabbas" id="carrabbas" onClick={(e) => { setBrand(e.target.value) }} />
                         <Label htmlFor="carrabbas">Carrabba's</Label>
                       </div>
-                      <div className="flex gap-2">
+                      <div className="flex gap-2 items-center">
                         <Separator orientation="vertical" />
+                        <Image src="/cig-favicon.png" width={20} height={10} alt="cig icon" />
                         <p className="text-sm leading-none font-medium w-7">CIG</p>
                       </div>
                     </div>
@@ -173,8 +176,9 @@ export default function Home() {
                         <RadioGroupItem value="bonefishgrill" id="bonefish" onClick={(e) => { setBrand(e.target.value) }} />
                         <Label htmlFor="bonefish">Bonefish Grill</Label>
                       </div>
-                      <div className="flex gap-2">
+                      <div className="flex gap-2 items-center">
                         <Separator orientation="vertical" />
+                        <Image src="/bfg-favicon.png" width={20} height={10} alt="bfg icon" />
                         <p className="text-sm leading-none font-medium w-7">BFG</p>
                       </div>
                     </div>
@@ -184,8 +188,9 @@ export default function Home() {
                         <RadioGroupItem value="dine-rewards" id="dine-rewards" onClick={(e) => { setBrand(e.target.value) }} />
                         <Label htmlFor="dine-rewards">Dine Rewards</Label>
                       </div>
-                      <div className="flex gap-2">
+                      <div className="flex gap-2 items-center">
                         <Separator orientation="vertical" />
+                        <Image src="/dr-favicon.png" width={20} height={10} alt="dr icon" />
                         <p className="text-sm leading-none font-medium w-7">DR</p>
                       </div>
                     </div>
@@ -201,7 +206,114 @@ export default function Home() {
         </TabsContent>
 
         <TabsContent value="app" className="mt-4">
+          <div className="w-full flex flex-col sm:flex-row gap-4">
+            <div className="w-full sm:w-fit">
+              <Card className="w-full">
+                <CardHeader>
+                  <CardTitle>Deep links</CardTitle>
+                  {/* <CardDescription>Escolha qual será o ambiente.</CardDescription> */}
+                  {/* <CardAction>Card Action</CardAction> */}
+                </CardHeader>
+                <CardContent>
 
+                  <p className="flex gap-2 items-center"><Image src="/obs-favicon.png" width={20} height={10} alt="obs icon" /> Outback</p>
+                  <div className="flex justify-between rounded-md transition-all duration-300 hover:bg-slate-100 py-1 pl-1 pr-4 w-full">
+                    <div className="flex items-center gap-3">
+                      <Link target="_blank" href="outback://specialReservation" className="flex w-fit">
+                        <span className="flex items-center gap-2 w-fit text-sm">
+                          outback://specialReservation<ExternalLink size={12} />
+                        </span>
+                      </Link>
+                    </div>
+                    <div className="flex gap-2">
+                      <Separator orientation="vertical" />
+                      <p className="text-sm leading-none font-medium w-7"></p>
+                    </div>
+                  </div>
+                  <div className="flex justify-between rounded-md transition-all duration-300 hover:bg-slate-100 py-1 pl-1 pr-4 w-full">
+                    <div className="flex items-center gap-3">
+                      <Link target="_blank" href="outback://cart" className="flex w-fit">
+                        <span className="flex items-center gap-2 w-fit text-sm">
+                          outback://cart<ExternalLink size={12} />
+                        </span>
+                      </Link>
+                    </div>
+                    <div className="flex gap-2">
+                      <Separator orientation="vertical" />
+                      <p className="text-sm leading-none font-medium w-7"></p>
+                    </div>
+                  </div>
+                  
+                  <Separator className="my-4" />
+
+                  <p className="flex gap-2 items-center"><Image src="/cig-favicon.png" width={20} height={10} alt="cig icon" /> Carrabba's</p>
+                  <div className="flex justify-between rounded-md transition-all duration-300 hover:bg-slate-100 py-1 pl-1 pr-4 w-full">
+                    <div className="flex items-center gap-3">
+                      <Link target="_blank" href="carrabbas://rewards" className="flex w-fit">
+                        <span className="flex items-center gap-2 w-fit text-sm">
+                          carrabbas://rewards<ExternalLink size={12} />
+                        </span>
+                      </Link>
+                    </div>
+                    <div className="flex gap-2">
+                      <Separator orientation="vertical" />
+                      <p className="text-sm leading-none font-medium w-7"></p>
+                    </div>
+                  </div>
+                  
+                  
+                  <Separator className="my-4" />
+
+                  <p className="flex gap-2 items-center"><Image src="/bfg-favicon.png" width={20} height={10} alt="bfg icon" /> Bonefish</p>
+                  <div className="flex justify-between rounded-md transition-all duration-300 hover:bg-slate-100 py-1 pl-1 pr-4 w-full">
+                    <div className="flex items-center gap-3">
+                      <Link target="_blank" href="bonefish://cart" className="flex w-fit">
+                        <span className="flex items-center gap-2 w-fit text-sm">
+                          bonefish://cart<ExternalLink size={12} />
+                        </span>
+                      </Link>
+                    </div>
+                    <div className="flex gap-2">
+                      <Separator orientation="vertical" />
+                      <p className="text-sm leading-none font-medium w-7"></p>
+                    </div>
+                  </div>
+                  <div className="flex justify-between rounded-md transition-all duration-300 hover:bg-slate-100 py-1 pl-1 pr-4 w-full">
+                    <div className="flex items-center gap-3">
+                      <Link target="_blank" href="bonefish://reservation?party_key=1442" className="flex w-fit">
+                        <span className="flex items-center gap-2 w-fit text-sm">
+                          bonefish://reservation?party_key=1442<ExternalLink size={12} />
+                        </span>
+                      </Link>
+                    </div>
+                    <div className="flex gap-2">
+                      <Separator orientation="vertical" />
+                      <p className="text-sm leading-none font-medium w-7"></p>
+                    </div>
+                  </div>
+                  <div className="flex justify-between rounded-md transition-all duration-300 hover:bg-slate-100 py-1 pl-1 pr-4 w-full">
+                    <div className="flex items-center gap-3">
+                      <Link target="_blank" href="bonefish://specialReservation" className="flex w-fit">
+                        <span className="flex items-center gap-2 w-fit text-sm">
+                          bonefish://specialReservation<ExternalLink size={12} />
+                        </span>
+                      </Link>
+                    </div>
+                    <div className="flex gap-2">
+                      <Separator orientation="vertical" />
+                      <p className="text-sm leading-none font-medium w-7"></p>
+                    </div>
+                  </div>
+                  
+                  
+
+                </CardContent>
+                {/* <CardFooter>
+            <p>Card Footer</p>
+          </CardFooter> */}
+              </Card>
+            </div>
+          </div>
         </TabsContent>
 
       </Tabs>
