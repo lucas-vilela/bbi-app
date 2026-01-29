@@ -156,7 +156,7 @@ export default function Home() {
                       </div>
                       <div className="flex gap-2 items-center">
                         <Separator orientation="vertical" />
-                        {/* <Image src="/obs-favicon.png" width={20} height={10} alt="obs icon" /> */}
+                        <Image src="/obs-favicon.png" width={20} height={10} alt="obs icon" />
                         <p className="text-sm leading-none font-medium w-7">OBS</p>
                       </div>
                     </div>
@@ -167,7 +167,7 @@ export default function Home() {
                       </div>
                       <div className="flex gap-2 items-center">
                         <Separator orientation="vertical" />
-                        {/* <Image src="/cig-favicon.png" width={20} height={10} alt="cig icon" /> */}
+                        <Image src="/cig-favicon.png" width={20} height={10} alt="cig icon" />
                         <p className="text-sm leading-none font-medium w-7">CIG</p>
                       </div>
                     </div>
@@ -178,7 +178,7 @@ export default function Home() {
                       </div>
                       <div className="flex gap-2 items-center">
                         <Separator orientation="vertical" />
-                        {/* <Image src="/bfg-favicon.png" width={20} height={10} alt="bfg icon" /> */}
+                        <Image src="/bfg-favicon.png" width={20} height={10} alt="bfg icon" />
                         <p className="text-sm leading-none font-medium w-7">BFG</p>
                       </div>
                     </div>
@@ -190,7 +190,7 @@ export default function Home() {
                       </div>
                       <div className="flex gap-2 items-center">
                         <Separator orientation="vertical" />
-                        {/* <Image src="/dr-favicon.png" width={20} height={10} alt="dr icon" /> */}
+                        <Image src="/dr-favicon.png" width={20} height={10} alt="dr icon" />
                         <p className="text-sm leading-none font-medium w-7">DR</p>
                       </div>
                     </div>
@@ -216,7 +216,7 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
 
-                  {/* <p className="flex gap-2 items-center"><Image src="/obs-favicon.png" width={20} height={10} alt="obs icon" /> Outback</p> */}
+                  <p className="flex gap-2 items-center"><Image src="/obs-favicon.png" width={20} height={10} alt="obs icon" /> Outback</p>
                   <div className="flex justify-between rounded-md transition-all duration-300 hover:bg-slate-100 py-1 pl-1 pr-4 w-full">
                     <div className="flex items-center gap-3">
                       <Link target="_blank" href="outback://specialReservation" className="flex w-fit">
@@ -246,7 +246,7 @@ export default function Home() {
                   
                   <Separator className="my-4" />
 
-                  {/* <p className="flex gap-2 items-center"><Image src="/cig-favicon.png" width={20} height={10} alt="cig icon" /> Carrabba's</p> */}
+                  <p className="flex gap-2 items-center"><Image src="/cig-favicon.png" width={20} height={10} alt="cig icon" /> Carrabba's</p>
                   <div className="flex justify-between rounded-md transition-all duration-300 hover:bg-slate-100 py-1 pl-1 pr-4 w-full">
                     <div className="flex items-center gap-3">
                       <Link target="_blank" href="carrabbas://rewards" className="flex w-fit">
@@ -264,7 +264,7 @@ export default function Home() {
                   
                   <Separator className="my-4" />
 
-                  {/* <p className="flex gap-2 items-center"><Image src="/bfg-favicon.png" width={20} height={10} alt="bfg icon" /> Bonefish</p> */}
+                  <p className="flex gap-2 items-center"><Image src="/bfg-favicon.png" width={20} height={10} alt="bfg icon" /> Bonefish</p>
                   <div className="flex justify-between rounded-md transition-all duration-300 hover:bg-slate-100 py-1 pl-1 pr-4 w-full">
                     <div className="flex items-center gap-3">
                       <Link target="_blank" href="bonefish://cart" className="flex w-fit">
