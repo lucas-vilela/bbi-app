@@ -255,10 +255,13 @@ export default function Home() {
                         </span>
                       </Link>
                     </div>
-                    {/* <div className="flex gap-2">
-                      <Separator orientation="vertical" />
-                      <p className="text-sm leading-none font-medium w-7"></p>
-                    </div> */}
+                    <div className="flex items-center gap-3">
+                      <Link target="_blank" href="carrabbas://specialReservation" className="flex w-fit">
+                        <span className="flex items-center gap-2 w-fit text-sm">
+                          carrabbas://specialReservation<ExternalLink size={12} />
+                        </span>
+                      </Link>
+                    </div>
                   </div>
                   
                   
