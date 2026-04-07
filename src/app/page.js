@@ -243,6 +243,19 @@ export default function Home() {
                       <p className="text-sm leading-none font-medium w-7"></p>
                     </div> */}
                   </div>
+                  <div className="flex justify-between rounded-md transition-all duration-300 hover:bg-slate-100 py-1 pl-1 pr-4 w-full">
+                    <div className="flex items-center gap-3">
+                      <Link target="_blank" href="outback://rewards" className="flex w-fit">
+                        <span className="flex items-center gap-2 w-fit text-sm">
+                          outback://rewards<ExternalLink size={12} />
+                        </span>
+                      </Link>
+                    </div>
+                    {/* <div className="flex gap-2">
+                      <Separator orientation="vertical" />
+                      <p className="text-sm leading-none font-medium w-7"></p>
+                    </div> */}
+                  </div>
 
                   <Separator className="my-6" />
 
