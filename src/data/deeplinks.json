@@ -1,0 +1,32 @@
+[
+  {
+    "brand": "Outback",
+    "favicon": "/obs-favicon.png",
+    "faviconAlt": "obs icon",
+    "links": [
+      "outback://specialReservation",
+      "outback://cart",
+      "outback://rewards"
+    ]
+  },
+  {
+    "brand": "Carrabba's",
+    "favicon": "/cig-favicon.png",
+    "faviconAlt": "cig icon",
+    "links": [
+      "carrabbas://rewards",
+      "carrabbas://specialReservation",
+      "carrabbas://cart"
+    ]
+  },
+  {
+    "brand": "Bonefish",
+    "favicon": "/bfg-favicon.png",
+    "faviconAlt": "bfg icon",
+    "links": [
+      "bonefish://cart",
+      "bonefish://reservation?party_key=1442",
+      "bonefish://specialReservation"
+    ]
+  }
+]

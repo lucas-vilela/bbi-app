@@ -1,0 +1,30 @@
+[
+  {
+    "id": "outback",
+    "label": "Outback",
+    "value": "outback",
+    "favicon": "/obs-favicon.png",
+    "abbreviation": "OBS"
+  },
+  {
+    "id": "carrabbas",
+    "label": "Carrabba's",
+    "value": "carrabbas",
+    "favicon": "/cig-favicon.png",
+    "abbreviation": "CIG"
+  },
+  {
+    "id": "bonefish",
+    "label": "Bonefish Grill",
+    "value": "bonefishgrill",
+    "favicon": "/bfg-favicon.png",
+    "abbreviation": "BFG"
+  },
+  {
+    "id": "dine-rewards",
+    "label": "Dine Rewards",
+    "value": "dine-rewards",
+    "favicon": "/dr-favicon.png",
+    "abbreviation": "DR"
+  }
+]

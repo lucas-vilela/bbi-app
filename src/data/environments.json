@@ -1,0 +1,37 @@
+[
+  {
+    "id": "development",
+    "label": "Development",
+    "value": "mav-dev.",
+    "abbreviation": "Dev",
+    "group": "low"
+  },
+  {
+    "id": "quality",
+    "label": "QA",
+    "value": "mav-qa.",
+    "abbreviation": null,
+    "group": "low"
+  },
+  {
+    "id": "stage",
+    "label": "Stage",
+    "value": "mav-stg.",
+    "abbreviation": "Stg",
+    "group": "low"
+  },
+  {
+    "id": "preview",
+    "label": "Preview",
+    "value": "mav-preview.",
+    "abbreviation": null,
+    "group": "high"
+  },
+  {
+    "id": "production",
+    "label": "Production",
+    "value": "",
+    "abbreviation": "Prd",
+    "group": "high"
+  }
+]
