@@ -50,7 +50,7 @@ export default function WebLinkPreview({ env, brand, palette, brandFavicon, bran
         >
           <span className="flex items-center gap-2 font-medium w-fit">
             {href}
-            <ExternalLink size={12} />
+            {openInNewTab ? <ExternalLink size={12} /> : null}
           </span>
         </Link>
         </div>
