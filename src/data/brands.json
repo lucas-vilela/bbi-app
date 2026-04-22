@@ -4,27 +4,47 @@
     "label": "Outback",
     "value": "outback",
     "favicon": "/obs-favicon.png",
-    "abbreviation": "OBS"
+    "abbreviation": "OBS",
+    "palette": {
+      "primary": "#891a1c",
+      "surface": "#f2e4d1",
+      "text": "#e5c8a2"
+    }
   },
   {
     "id": "carrabbas",
     "label": "Carrabba's",
     "value": "carrabbas",
     "favicon": "/cig-favicon.png",
-    "abbreviation": "CIG"
+    "abbreviation": "CIG",
+    "palette": {
+      "primary": "#f7f2e9",
+      "surface": "#9e1e22",
+      "text": "#404041"
+    }
   },
   {
     "id": "bonefish",
     "label": "Bonefish Grill",
     "value": "bonefishgrill",
     "favicon": "/bfg-favicon.png",
-    "abbreviation": "BFG"
+    "abbreviation": "BFG",
+    "palette": {
+      "primary": "#3e7a7b",
+      "surface": "#f5f5f5",
+      "text": "#FFF"
+    }
   },
   {
     "id": "dine-rewards",
     "label": "Dine Rewards",
     "value": "dine-rewards",
     "favicon": "/dr-favicon.png",
-    "abbreviation": "DR"
+    "abbreviation": "DR",
+    "palette": {
+      "primary": "#AB6503",
+      "surface": "#DED9C7",
+      "text": "#FFF"
+    }
   }
 ]
