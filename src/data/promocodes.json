@@ -1,0 +1,17 @@
+[
+  {
+    "brand": "Outback",
+    "lab": "Sandbox Lab 9939",
+    "codes": ["test", "TEST5OFF", "apptest"]
+  },
+  {
+    "brand": "Carrabbas",
+    "lab": "Sandbox Lab 9910",
+    "codes": ["PASTA5OFF", "cigapp"]
+  },
+  {
+    "brand": "Bonefish",
+    "lab": "Sandbox Lab 9953",
+    "codes": ["5OFF20"]
+  }
+]

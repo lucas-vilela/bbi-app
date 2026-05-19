@@ -7,6 +7,7 @@ import BrandSelector from "@/components/custom/BrandSelector";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import GiftCardsTab from "@/components/custom/GiftCardsTab";
 import CreditCardsTab from "@/components/custom/CreditCardsTab";
+import PromoCodesTab from "@/components/custom/PromoCodesTab";
 import brands from "@/data/brands.json";
 
 export default function WebTab() {
@@ -21,6 +22,7 @@ export default function WebTab() {
           <TabsTrigger value="links">Links</TabsTrigger>
           <TabsTrigger value="gift-cards">Gift Cards</TabsTrigger>
           <TabsTrigger value="credit-cards">Credit Cards</TabsTrigger>
+          <TabsTrigger value="promo-codes">Promo Codes</TabsTrigger>
         </TabsList>
 
         <TabsContent value="links" className="flex flex-col gap-4">
@@ -49,6 +51,10 @@ export default function WebTab() {
 
         <TabsContent value="credit-cards">
           <CreditCardsTab />
+        </TabsContent>
+
+        <TabsContent value="promo-codes">
+          <PromoCodesTab />
         </TabsContent>
       </Tabs>
     </div>
