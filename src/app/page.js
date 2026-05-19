@@ -5,7 +5,7 @@ import AppTab from "@/components/custom/AppTab";
 
 export default function Home() {
   return (
-    <main className="flex flex-col gap-4 min-h-screen w-full py-10 px-2 sm:px-10">
+    <main className="flex flex-col gap-4 min-h-screen w-full py-4 px-2 sm:px-10">
       <Tabs defaultValue="web">
         <TabsList>
           <TabsTrigger value="web">
