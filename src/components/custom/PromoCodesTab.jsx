@@ -31,36 +31,38 @@ function CopyButton({ value, message }) {
 
 export default function PromoCodesTab() {
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col">
       <p className="flex items-center gap-1.5 text-xs text-muted-foreground mb-4">
         <TriangleAlert size={13} />
         Works in development environments only
       </p>
-      {promoCodes.map((group) => (
-        <div key={group.brand} className="flex flex-col gap-2">
-          <div>
-            <h3 className="text-sm font-semibold">{group.brand}</h3>
-            <p className="text-xs text-muted-foreground">{group.lab}</p>
-          </div>
-          <Table>
-            <TableHeader>
-              <TableRow>
-                <TableHead>Promo Code</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {group.codes.map((code) => (
-                <TableRow key={code}>
-                  <TableCell className="font-mono">
-                    {code}
-                    <CopyButton value={code} message="Promo code copied" />
-                  </TableCell>
+      <div className="flex flex-col gap-8">
+        {promoCodes.map((group) => (
+          <div key={group.brand} className="flex flex-col gap-2">
+            <div>
+              <h3 className="text-sm font-semibold">{group.brand}</h3>
+              <p className="text-xs text-muted-foreground">{group.lab}</p>
+            </div>
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead>Promo Code</TableHead>
                 </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </div>
-      ))}
+              </TableHeader>
+              <TableBody>
+                {group.codes.map((code) => (
+                  <TableRow key={code}>
+                    <TableCell className="font-mono">
+                      {code}
+                      <CopyButton value={code} message="Promo code copied" />
+                    </TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
