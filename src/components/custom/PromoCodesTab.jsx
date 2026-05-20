@@ -32,6 +32,10 @@ function CopyButton({ value, message }) {
 export default function PromoCodesTab() {
   return (
     <div className="flex flex-col gap-8">
+      <p className="flex items-center gap-1.5 text-xs text-muted-foreground mb-4">
+        <TriangleAlert size={13} />
+        Works in development environments only
+      </p>
       {promoCodes.map((group) => (
         <div key={group.brand} className="flex flex-col gap-2">
           <div>
