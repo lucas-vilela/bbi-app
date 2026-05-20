@@ -1,6 +1,6 @@
 "use client";
 
-import { Copy } from "lucide-react";
+import { Copy, TriangleAlert } from "lucide-react";
 import { toast } from "sonner";
 import {
   Table,
