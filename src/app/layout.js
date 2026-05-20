@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "BBI links",
-  description: "BBI QA app",
+  title: "DTI+BR QA Tool",
+  description: "DTI+BR QA utilities for development and testing purposes",
 };
 
 export default function RootLayout({ children }) {
