@@ -1,7 +1,8 @@
-import { Smartphone, Monitor } from "lucide-react";
+import { Smartphone, Monitor, LayoutGrid } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import WebTab from "@/components/custom/WebTab";
 import AppTab from "@/components/custom/AppTab";
+import GeneralTab from "@/components/custom/GeneralTab";
 
 export default function Home() {
   return (
@@ -16,6 +17,10 @@ export default function Home() {
             <Smartphone />
             App
           </TabsTrigger>
+          <TabsTrigger value="general">
+            <LayoutGrid />
+            General
+          </TabsTrigger>
         </TabsList>
 
         <TabsContent value="web" className="flex flex-col gap-4 w-full">
@@ -24,6 +29,10 @@ export default function Home() {
 
         <TabsContent value="app" className="mt-4">
           <AppTab />
+        </TabsContent>
+
+        <TabsContent value="general" className="mt-4">
+          <GeneralTab />
         </TabsContent>
       </Tabs>
     </main>
