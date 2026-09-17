@@ -4,9 +4,10 @@ import { useState } from "react";
 import WebLinkPreview from "@/components/custom/WebLinkPreview";
 import EnvironmentSelector from "@/components/custom/EnvironmentSelector";
 import BrandSelector from "@/components/custom/BrandSelector";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import brands from "@/data/brands.json";
 
-export default function WebTab() {
+function LinksTab() {
   const [env, setEnv] = useState("mav-qa.");
   const [brand, setBrand] = useState("outback");
   const selectedBrand = brands.find((brandOption) => brandOption.value === brand);
@@ -30,6 +31,22 @@ export default function WebTab() {
           <BrandSelector defaultValue={brand} onSelect={setBrand} />
         </div>
       </div>
+    </div>
+  );
+}
+
+export default function WebTab() {
+  return (
+    <div className="flex flex-col gap-4 w-full">
+      <Tabs defaultValue="links">
+        <TabsList>
+          <TabsTrigger value="links">Links</TabsTrigger>
+        </TabsList>
+
+        <TabsContent value="links" className="mt-4">
+          <LinksTab />
+        </TabsContent>
+      </Tabs>
     </div>
   );
 }
