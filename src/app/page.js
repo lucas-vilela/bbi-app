@@ -23,7 +23,7 @@ export default function Home() {
           </TabsTrigger>
         </TabsList>
 
-        <TabsContent value="web" className="flex flex-col gap-4 w-full">
+        <TabsContent value="web" className="mt-4">
           <WebTab />
         </TabsContent>
 

@@ -15,15 +15,15 @@ export default function GeneralTab() {
           <TabsTrigger value="promo-codes">Promo Codes</TabsTrigger>
         </TabsList>
 
-        <TabsContent value="gift-cards">
+        <TabsContent value="gift-cards" className="mt-4">
           <GiftCardsTab />
         </TabsContent>
 
-        <TabsContent value="credit-cards">
+        <TabsContent value="credit-cards" className="mt-4">
           <CreditCardsTab />
         </TabsContent>
 
-        <TabsContent value="promo-codes">
+        <TabsContent value="promo-codes" className="mt-4">
           <PromoCodesTab />
         </TabsContent>
       </Tabs>
