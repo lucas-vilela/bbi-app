@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import { Toaster } from "@/components/ui/sonner";
+import RegisterSW from "./register-sw";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -15,6 +16,11 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "DTI+BR QA Tool",
   description: "DTI+BR QA utilities for development and testing purposes",
+  manifest: "/manifest.json",
+};
+
+export const viewport = {
+  themeColor: "#ffffff",
 };
 
 export default function RootLayout({ children }) {
@@ -25,6 +31,7 @@ export default function RootLayout({ children }) {
       >
         {children}
         <Toaster />
+        <RegisterSW />
       </body>
     </html>
   );
