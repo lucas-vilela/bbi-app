@@ -1,32 +1,183 @@
 [
   {
-    "brand": "Outback",
-    "favicon": "/obs-favicon.png",
-    "faviconAlt": "obs icon",
-    "links": [
-      "outback://specialReservation",
-      "outback://cart",
-      "outback://rewards"
-    ]
+    "id": "account",
+    "urls": {
+      "obs": "outback://account",
+      "cig": "carrabbas://account",
+      "bfg": "bonefish://account"
+    },
+    "description": "Takes the user to the account tab",
+    "active": true
   },
   {
-    "brand": "Carrabba's",
-    "favicon": "/cig-favicon.png",
-    "faviconAlt": "cig icon",
-    "links": [
-      "carrabbas://rewards",
-      "carrabbas://specialReservation",
-      "carrabbas://cart"
-    ]
+    "id": "cart",
+    "urls": {
+      "obs": "outback://cart",
+      "cig": "carrabbas://cart",
+      "bfg": "bonefish://cart"
+    },
+    "description": "Takes the user to the current bag screen",
+    "active": true
   },
   {
-    "brand": "Bonefish",
-    "favicon": "/bfg-favicon.png",
-    "faviconAlt": "bfg icon",
-    "links": [
-      "bonefish://cart",
-      "bonefish://reservation?party_key=1442",
-      "bonefish://specialReservation"
-    ]
+    "id": "confirmation",
+    "urls": {
+      "obs": "outback://confirmation?id={{Order_Id}}",
+      "cig": "carrabbas://confirmation?id={{Order_Id}}",
+      "bfg": "bonefish://confirmation?id={{Order_Id}}"
+    },
+    "description": "Takes the user to the full confirmation screen (Currently only used to orders made on App)",
+    "active": true
+  },
+  {
+    "id": "home",
+    "urls": {
+      "obs": "outback://home",
+      "cig": "carrabbas://home",
+      "bfg": "bonefish://home"
+    },
+    "description": "Takes the user to the home tab",
+    "active": true
+  },
+  {
+    "id": "order",
+    "urls": {
+      "obs": "outback://order",
+      "cig": "carrabbas://order",
+      "bfg": "bonefish://order"
+    },
+    "description": "Takes the user to the order tab",
+    "active": true
+  },
+  {
+    "id": "order-menu",
+    "urls": {
+      "obs": "outback://order/menu",
+      "cig": "carrabbas://order/menu",
+      "bfg": "bonefish://order/menu"
+    },
+    "description": "Takes the user to the order tab",
+    "active": true
+  },
+  {
+    "id": "order-menu-product",
+    "urls": {
+      "obs": "outback://order/menu?productId={chain-product-id}",
+      "cig": "carrabbas://order/menu?productId={chain-product-id}",
+      "bfg": "bonefish://order/menu?productId={chain-product-id}"
+    },
+    "description": "Takes the user to the customization page considering the current olo location. If no selected location, redirects to Order Details screen (Handoff) (Currently only used to App Only Feature)",
+    "active": true
+  },
+  {
+    "id": "order-menu-category",
+    "urls": {
+      "obs": "outback://order/menu?categoryId={category-id}",
+      "cig": "carrabbas://order/menu?categoryId={category-id}",
+      "bfg": "bonefish://order/menu?categoryId={category-id}"
+    },
+    "description": "Takes the user to the menu page considering the current olo location, scrolling the user to the category based on the olo category id (unique across location) if exists. If no selected location, redirects to Order Details screen (Handoff) (Currently only used to App Only Feature)",
+    "active": true
+  },
+  {
+    "id": "order-menu-vendor",
+    "urls": {
+      "obs": "outback://order/menu?vendorId={OLO-ID}",
+      "cig": "carrabbas://order/menu?vendorId={OLO-ID}",
+      "bfg": "bonefish://order/menu?vendorId={OLO-ID}"
+    },
+    "description": "Takes the user to the menu page considering the olo location id. If has selected location with no empty basket, shows a transfer basket request modal. (Currently only used to App Only Feature)",
+    "active": true
+  },
+  {
+    "id": "order-menu-product-vendor",
+    "urls": {
+      "obs": "outback://order/menu?productId={chain-product-id}&vendorId={OLO-ID}",
+      "cig": "carrabbas://order/menu?productId={chain-product-id}&vendorId={OLO-ID}",
+      "bfg": "bonefish://order/menu?productId={chain-product-id}&vendorId={OLO-ID}"
+    },
+    "description": "Takes the user to the customization page considering the olo location id, if products exists. (Currently only used to App Only Feature)",
+    "active": true
+  },
+  {
+    "id": "order-menu-category-vendor",
+    "urls": {
+      "obs": "outback://order/menu?categoryId={category-id}&vendorId={OLO-ID}",
+      "cig": "carrabbas://order/menu?categoryId={category-id}&vendorId={OLO-ID}",
+      "bfg": "bonefish://order/menu?categoryId={category-id}&vendorId={OLO-ID}"
+    },
+    "description": "Scroll the user to the category based on the olo category id (unique across location). If has selected location with no empty basket, shows a transfer basket request modal.",
+    "active": true
+  },
+  {
+    "id": "reservation",
+    "urls": {
+      "obs": "outback://reservation",
+      "cig": "carrabbas://reservation",
+      "bfg": "bonefish://reservation"
+    },
+    "description": "Takes the user to the waitlist/reservation flow",
+    "active": true
+  },
+  {
+    "id": "reservation-party-key",
+    "urls": {
+      "obs": "outback://reservation?party_key={{api_trigger_properties.${reservation_party_key}}}",
+      "cig": "carrabbas://reservation?party_key={{api_trigger_properties.${reservation_party_key}}}",
+      "bfg": "bonefish://reservation?party_key={{api_trigger_properties.${reservation_party_key}}}"
+    },
+    "description": "Takes the user to the waitlist/reservation details screen (braze only)",
+    "active": true
+  },
+  {
+    "id": "rewards",
+    "urls": {
+      "obs": "outback://rewards",
+      "cig": "carrabbas://rewards",
+      "bfg": "bonefish://rewards"
+    },
+    "description": "Takes the user to the rewards tab",
+    "active": true
+  },
+  {
+    "id": "rewards-info",
+    "urls": {
+      "obs": "outback://rewards/info",
+      "cig": "carrabbas://rewards/info",
+      "bfg": "bonefish://rewards/info"
+    },
+    "description": "Takes the user to the rewards info screen on the rewards tab",
+    "active": true
+  },
+  {
+    "id": "special-reservation",
+    "urls": {
+      "obs": "outback://specialReservation",
+      "cig": "carrabbas://specialReservation",
+      "bfg": "bonefish://specialReservation"
+    },
+    "description": "Takes the user to the special reservation flow",
+    "active": true
+  },
+  {
+    "id": "webview",
+    "urls": {
+      "obs": "outback://webview?url=XXXXXXXX",
+      "cig": "carrabbas://webview?url=XXXXXXXX",
+      "bfg": "bonefish://webview?url=XXXXXXXX"
+    },
+    "description": "Opens a specific URL in a webview. Used to redirect users when they click on the Dynamic Card on the Home. XXXXXXXX = url with https://",
+    "active": true
+  },
+  {
+    "id": "checkin",
+    "urls": {
+      "obs": "outback://checkin?id={{Order_Id}}",
+      "cig": "outback://checkin?id={{Order_Id}}",
+      "bfg": "bonefish://checkin?id={{Order_Id}}"
+    },
+    "description": "Takes the user to the parking entry screen",
+    "active": false,
+    "deprecated": true
   }
 ]
